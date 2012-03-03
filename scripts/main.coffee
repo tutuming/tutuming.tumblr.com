@@ -1,5 +1,5 @@
 path = (args...) ->
-  args.replace '@', 'https://raw.github.com/tutuming/tutuming.tumblr.com/master/scripts/sh/' for arg in args
+  arg.replace '@', 'https://raw.github.com/tutuming/tutuming.tumblr.com/master/scripts/sh/' for arg in args
 
 SyntaxHighlighter.autoloader.apply(null, path(
   'applescript            @shBrushAppleScript.js',

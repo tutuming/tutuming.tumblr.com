@@ -7,7 +7,7 @@ path = function() {
   _results = [];
   for (_i = 0, _len = args.length; _i < _len; _i++) {
     arg = args[_i];
-    _results.push(args.replace('@', 'https://raw.github.com/tutuming/tutuming.tumblr.com/master/scripts/sh/'));
+    _results.push(arg.replace('@', 'https://raw.github.com/tutuming/tutuming.tumblr.com/master/scripts/sh/'));
   }
   return _results;
 };
