@@ -5,7 +5,8 @@ onload = ->
   SyntaxHighlighter.highlight()
 
 yepnope
-  load : ["http://tutuming.github.com/tutuming.tumblr.com/styles/main.css"
+  load : ["http://tutuming.github.com/tutuming.tumblr.com/scripts/sh/XRegExp.js"
+          "http://tutuming.github.com/tutuming.tumblr.com/styles/main.css"
           "http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"
           "http://tutuming.github.com/tutuming.tumblr.com/styles/sh/shCore.css"
           "http://tutuming.github.com/tutuming.tumblr.com/styles/sh/shThemeFadeToGrey.css" ]
