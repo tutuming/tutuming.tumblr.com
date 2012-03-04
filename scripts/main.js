@@ -14,3 +14,15 @@ require([
   });
 });
 
+(function(){
+  var loadCss = function loadCss(url) {
+    var link = document.createElement("link");
+    link.type = "text/css";
+    link.rel = "stylesheet";
+    link.href = url;
+    document.getElementsByTagName("head")[0].appendChild(link);
+  };
+  loadCss("http://tutuming.github.com/tutuming.tumblr.com/styles/main.css");
+  loadCss("http://tutuming.github.com/tutuming.tumblr.com/styles/sh/shCore.css");
+  loadCss("http://tutuming.github.com/tutuming.tumblr.com/styles/sh/shThemeFadeToGrey.css");
+})();
