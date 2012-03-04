@@ -12,7 +12,7 @@ yepnope [
     "http://tutuming.github.com/tutuming.tumblr.com/scripts/sh/shBrushJScript.js"
     "http://tutuming.github.com/tutuming.tumblr.com/scripts/sh/shBrushXml.js"
     "http://tutuming.github.com/tutuming.tumblr.com/scripts/sh/shBrushPython.js"
-    "http://tutuming.github.com/tutuming.tumblr.com/scripts/shBrushCoffeeScript.js"
+    "http://tutuming.github.com/tutuming.tumblr.com/scripts/sh/shBrushCoffeeScript.js"
   ]
   complete : ->
     SyntaxHighlighter.config.bloggerMode = false
