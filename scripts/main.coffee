@@ -1,4 +1,8 @@
 onload = ->
+  SyntaxHighlighter.config.bloggerMode = false
+  SyntaxHighlighter.config.stripBrs = true
+  SyntaxHighlighter.defaults['wrap-lines'] = false
+  SyntaxHighlighter.all()
 
 yepnope [
   load : [
@@ -18,10 +22,5 @@ yepnope [
     "http://tutuming.github.com/tutuming.tumblr.com/scripts/sh/shBrushCoffeeScript.js"
   ]
   complete : ->
-    SyntaxHighlighter.config.bloggerMode = false
-    SyntaxHighlighter.config.stripBrs = true
-    SyntaxHighlighter.defaults['wrap-lines'] = false
-    SyntaxHighlighter.all()
-
     $.document.ready(onload)
 ]

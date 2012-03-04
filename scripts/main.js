@@ -1,6 +1,11 @@
 var onload;
 
-onload = function() {};
+onload = function() {
+  SyntaxHighlighter.config.bloggerMode = false;
+  SyntaxHighlighter.config.stripBrs = true;
+  SyntaxHighlighter.defaults['wrap-lines'] = false;
+  return SyntaxHighlighter.all();
+};
 
 yepnope([
   {
@@ -10,10 +15,6 @@ yepnope([
     load: ["http://tutuming.github.com/tutuming.tumblr.com/scripts/sh/shBrushJScript.js", "http://tutuming.github.com/tutuming.tumblr.com/scripts/sh/shBrushXml.js", "http://tutuming.github.com/tutuming.tumblr.com/scripts/sh/shBrushPython.js", "http://tutuming.github.com/tutuming.tumblr.com/scripts/sh/shBrushCoffeeScript.js"]
   }, {
     complete: function() {
-      SyntaxHighlighter.config.bloggerMode = false;
-      SyntaxHighlighter.config.stripBrs = true;
-      SyntaxHighlighter.defaults['wrap-lines'] = false;
-      SyntaxHighlighter.all();
       return $.document.ready(onload);
     }
   }
