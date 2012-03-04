@@ -18,5 +18,5 @@ yepnope [{
          "http://tutuming.github.com/tutuming.tumblr.com/scripts/sh/shBrushPython.js"
          "http://tutuming.github.com/tutuming.tumblr.com/scripts/sh/shBrushCoffeeScript.js"]
   complete : ->
-    $.document.ready(onload)
+    $(onload)
 }]

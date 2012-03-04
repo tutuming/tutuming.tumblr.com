@@ -15,7 +15,7 @@ yepnope([
   }, {
     load: ["http://tutuming.github.com/tutuming.tumblr.com/scripts/sh/shBrushJScript.js", "http://tutuming.github.com/tutuming.tumblr.com/scripts/sh/shBrushXml.js", "http://tutuming.github.com/tutuming.tumblr.com/scripts/sh/shBrushPython.js", "http://tutuming.github.com/tutuming.tumblr.com/scripts/sh/shBrushCoffeeScript.js"],
     complete: function() {
-      return $.document.ready(onload);
+      return $(onload);
     }
   }
 ]);
