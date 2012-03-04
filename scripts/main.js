@@ -1,6 +1,9 @@
 var onload;
 
 onload = function() {
+  SyntaxHighlighter.config.bloggerMode = false;
+  SyntaxHighlighter.config.stripBrs = true;
+  SyntaxHighlighter.defaults['wrap-lines'] = false;
   return SyntaxHighlighter.highlight();
 };
 
