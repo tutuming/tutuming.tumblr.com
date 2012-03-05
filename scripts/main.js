@@ -17,6 +17,10 @@ require([
         $('.gist').each(function(i) {
           writeCapture.html(this, '<script src="'+$(this).text()+'.js"></script>');
         });
+
+        if($('.twitter-tweet').length){
+          $('body').writeCapture().append('<script src="//platform.twitter.com/widgets.js" charset="utf-8"></script>');
+        }
       });
     });
   });
