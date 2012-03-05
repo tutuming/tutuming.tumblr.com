@@ -18,9 +18,9 @@ require([
           writeCapture.html(this, '<script src="'+$(this).text()+'.js"></script>');
         });
 
-        if($('.twitter-tweet').length){
-          $('body').writeCapture().append('<script src="//platform.twitter.com/widgets.js" charset="utf-8"></script>');
-        }
+        $('.tweet').each(function(i){
+          $(this).writeCapture().append('<script src="//platform.twitter.com/widgets.js" charset="utf-8"></script>');
+        });
       });
     });
   });
