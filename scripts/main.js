@@ -7,12 +7,16 @@ require([
              "http://tutuming.github.com/tutuming.tumblr.com/scripts/sh/shBrushXml.js",
              "http://tutuming.github.com/tutuming.tumblr.com/scripts/sh/shBrushPython.js",
              "http://tutuming.github.com/tutuming.tumblr.com/scripts/sh/shBrushCoffeeScript.js",
-             "writeCapture.js"],function(){
+             "http://tutuming.github.com/tutuming.tumblr.com/scripts/writeCapture.js"],function(){
       $(function(){
         SyntaxHighlighter.config.bloggerMode = false;
         SyntaxHighlighter.config.stripBrs = true;
         SyntaxHighlighter.defaults['wrap-lines'] = false;
         SyntaxHighlighter.highlight();
+
+        $('.gist').each(function(i) {
+          writeCapture.html(this, '<script src="'+$(this).text()+'.js"></script>');
+        });
       });
     });
   });
