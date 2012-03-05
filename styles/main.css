@@ -1,3 +1,7 @@
 pre, code{
   white-space : pre;
 }
+
+.syntaxhighlighter { 
+  padding　: 5px;
+}
