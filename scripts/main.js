@@ -19,7 +19,9 @@ require([
         });
 
         $('.tweet').each(function(i){
-          $(this).writeCapture().append('<script src="//platform.twitter.com/widgets.js" charset="utf-8"></script>');
+          var $tmp = $('<div />');
+          $(this).append($tmp);
+          writeCapture.replaceWith($tmp.get(0), '<script src="//platform.twitter.com/widgets.js" charset="utf-8"></script>');
         });
       });
     });
