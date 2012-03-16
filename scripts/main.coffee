@@ -7,7 +7,8 @@ require [ "http://tutuming.github.com/tutuming.tumblr.com/scripts/sh/XRegExp.js"
         SyntaxHighlighter.defaults["wrap-lines"] = false
         SyntaxHighlighter.highlight()
         $(".gist").each (i) ->
-          url = $(this).text()
+          url = $(this).text().replace /^\s+|\s+$/g, ''
+
           [gist, file] = url.split('?')
 
           jsUrl = if file then "#{gist}.js?#{file}" else "#{gist}.js"
