@@ -9,6 +9,7 @@ require [ "http://tutuming.github.com/tutuming.tumblr.com/scripts/sh/XRegExp.js"
         $(".gist").each (i) ->
           url = $(this).text()
           [gist, file] = url.split('?')
+
           jsUrl = if file then "#{gist}.js?#{file}" else "#{gist}.js"
           writeCapture.html this, "<script src=\"#{jsUrl}\"></script>"
 
