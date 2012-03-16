@@ -11,7 +11,7 @@
           $(".gist").each(function(i) {
             var file, gist, jsUrl, url, _ref;
             url = $(this).text();
-            _ref = url.split('#'), gist = _ref[0], file = _ref[1];
+            _ref = url.split('?'), gist = _ref[0], file = _ref[1];
             jsUrl = file ? "" + gist + ".js?" + file : "" + gist + ".js";
             return writeCapture.html(this, "<script src=\"" + jsUrl + "\"></script>");
           });
