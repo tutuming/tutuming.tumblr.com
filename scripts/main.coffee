@@ -11,7 +11,9 @@ require [ "http://tutuming.github.com/tutuming.tumblr.com/scripts/sh/XRegExp.js"
           [gist, file] = url.split('?')
 
           jsUrl = if file then "#{gist}.js?#{file}" else "#{gist}.js"
-          writeCapture.html this, "<script src=\"#{jsUrl}\"></script>"
+          setTimeout =>
+            writeCapture.html this, "<script src=\"#{jsUrl}\"></script>"
+          , 1
 
         $(".tweet").each (i) ->
           $tmp = $("<div />")

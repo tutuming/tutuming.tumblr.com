@@ -9,11 +9,14 @@
           SyntaxHighlighter.defaults["wrap-lines"] = false;
           SyntaxHighlighter.highlight();
           $(".gist").each(function(i) {
-            var file, gist, jsUrl, url, _ref;
+            var file, gist, jsUrl, url, _ref,
+              _this = this;
             url = $(this).text();
             _ref = url.split('?'), gist = _ref[0], file = _ref[1];
             jsUrl = file ? "" + gist + ".js?" + file : "" + gist + ".js";
-            return writeCapture.html(this, "<script src=\"" + jsUrl + "\"></script>");
+            return setTimeout(function() {
+              return writeCapture.html(_this, "<script src=\"" + jsUrl + "\"></script>");
+            }, 1);
           });
           return $(".tweet").each(function(i) {
             var $tmp;
